@@ -1,60 +1,290 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="src/style.css"> 
-</head>
-
-<body>
-  <header class = "header">
-    <h1>Aadit Nagori</h1>
-  </header>
-
-  <nav class = "navigation-bar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main>
-
-    <section id="home">
-      <div class = "block">
-        <h2>Welcome</h2>
-        <p>Welcome to my portfolio website..\n</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/mediaqueries.css">
+    <link rel="icon" type="image/png" href="src/img/favicon.png">
+  </head>
+  <body>
+    <nav id = "desktop-nav"
+      <div class = "logo">Aadit Nagori</div>
+      <div>
+        <ul class = "nav-links">
+          <li><a href = "#about">About</a></li>
+          <li><a href = "#skills">Skills</a></li>
+          <li><a href = "#projects">Projects</a></li>
+          <li><a href = "#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Aadit Nagori</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick = "toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href = "#about" onclick= "toggleMenu()">About</a></li>
+          <li><a href = "#skills" onclick= "toggleMenu()">Skills</a></li>
+          <li><a href = "#projects" onclick= "toggleMenu()">Projects</a></li>
+          <li><a href = "#contact" onclick= "toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id = "profile">
+      <div class = "section_pic-container">
+        <img src="assets/Hero.png" alt="Profile Picture">
+      </div>
+      <div class = "section_text">
+        <p class = "section_text-heading">Hello, I'm</p>
+        <h1 class = "title">Aadit Nagori</h1>
+        <p class = "section_text-subheading">Welcome to my Project homepage</p>
+        <div class = "btn-container">
+          <button class = "btn btn-color-2" onclick="window.open('./assets/resume_Aadit_Nagori.pdf')">
+            My Resume
+          </button>
+          <button class = "btn btn-color-1" onclick="location.href = '#about'">
+            About Me
+          </button>
+        </div>
+        <div id = "socials-container">
+          <a href="https://www.linkedin.com/in/aadit-nagori-a59374220/" target="_blank">
+            <ion-icon name="logo-linkedin" id = "linkedin" size = "large"></ion-icon>
+          </a>
+          <a href="https://github.com/Aadit-Nagori" target="_blank">
+            <ion-icon name="logo-github" size = "large"></ion-icon>
+          </a>
+        </div>
       </div>
     </section>
-
-    <section id="portfolio">
-      <div class="block">
-        <h2>Portfolio</h2>
-        <p>Here are some of my projects...</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <section id = "about">
+      <p class = "section_text-heading">Get To Know More</p>
+      <h1 class = "title">About Me</h1>
+      <div class = "section-container">
+        <div class = "section_pic-container">
+          <img src = "assets/About.JPG" alt = "About Picture" class = about-pic>
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <ion-icon name="ribbon"></ion-icon>
+              <h3>Experience</h3>
+              <p>2+ years of Relevant Work Experience working at Nuvama Wealth and QBE Insurance</p>
+            </div>
+            <div class="details-container">
+              <ion-icon name="school"></ion-icon>
+              <h3>Education</h3>
+              <p>Currently in my Junior year of my Bachelors in Computer Science at Rensselaer Polytechnic Institute</p>
+            </div>
+          </div>
+          <div class = "text-container">
+            <p>
+              My strongest technical skills are C, C++, Python, SQL and Java, 
+              but I am also familiar with HTML, CSS, JavaScript, and Swift 
+              as well as several other languages and technologies listed on my resume. 
+              I have a history of strong leadership and communication skills and tend to
+              get involved wherever I can. I have an extreme passion for learning and trying new things
+              and inculcate this attitude in everything I do - be it learning new technologies or trying 
+              new cuisines. My studies and extracurricular projects have made me very skilled at debugging,
+              writing clean and efficient code, as well as picking up new languages very quickly and understanding 
+              code that I have never seen before.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <ion-icon name="arrow-down-outline" onclick="location.href='#skills'" class = "icon arrow"></ion-icon> -->
+    </section>
+    <section id = "skills">
+      <p class = "section_text-heading">Explore My</p>
+      <h1 class = "title">Skills</h1>
+      <div class = "skill-details-container">
+        <div class = "about-containers">
+          <div class = "details-container">
+            <h2 class = "skill-title">Programming Languages and Agile Methodologies</h2>
+            <div class = "article-container">
+              <article>
+                <ion-icon name="code"></ion-icon>
+                <div>
+                  <h3>C/C++</h3>
+                  <p>4+ years of experience</p>
+                </div>
+              </article>
+              <article>
+                <ion-icon name="code"></ion-icon>
+                <div>
+                  <h3>Python</h3>
+                  <p>4+ years of experience</p>
+                </div>
+              </article>
+              <article>
+                <ion-icon name="code"></ion-icon>
+                <div>
+                  <h3>Java</h3>
+                  <p>3+ years of experience</p>
+                </div>
+              </article>
+              <article>
+                <ion-icon name="code"></ion-icon>
+                <div>
+                  <h3>Javascript</h3>
+                  <p>2+ years of experience</p>
+                </div>
+              </article>
+              <article>
+                <ion-icon name="code"></ion-icon>
+                <div>
+                  <h3>HTML</h3>
+                  <p>1+ years of experience</p>
+                </div>
+              </article>
+              <article>
+                <ion-icon name="code"></ion-icon>
+                <div>
+                  <h3>Swift</h3>
+                  <p>1+ years of experience</p>
+                </div>
+              </article>
+              <article>
+                <ion-icon name="code"></ion-icon>
+                <div>
+                  <h3>PostgreSql</h3>
+                  <p>1+ years of experience</p>
+                </div>
+              </article>
+              <article>
+                <ion-icon name="code"></ion-icon>
+                <div>
+                  <h3>Assembly</h3>
+                  <p>1+ years of experience</p>
+                </div>
+              </article>
+              <article>
+                <ion-icon name="reader"></ion-icon>
+                <div>
+                  <h3>Scrum</h3>
+                  <p>1+ years of experience</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <ion-icon name="arrow-down-outline" onclick="location.href='#projects'" class = "arrow"></ion-icon> -->
+    </section>
+    <section id = "projects">
+      <p class = "section_text-heading">Browse My Recent</p>
+      <h1 class = "title">Projects</h1>
+      <div class = "skill-details-container project-container">
+        <div class = "about-containers">
+        <div class = "details-container color-container">
+          <div class = "article-container img-container">
+            <img src = "assets/portfolio-readee.png" alt = "ReadEE" class = "project-img">
+            <div class="image-overlay">
+              <a href="https://github.com/tommycbird/readee" class="project-link">
+                <ion-icon name="logo-github" class = "project-logo"></ion-icon>
+              </a>
+            </div>
+          </div>
+          <h2 class = "skill-title project-title">ReadEE</h2>
+          <h3 class = "project-subtitle" >Visual Learning Aid Chrome Extension</h3>
+          <div class = "btn-container">
+            <button class = "btn btn-color-1 " onclick="window.open('https://www.youtube.com/watch?v=yqiPp7Mc8mQ')">
+              Demo Video
+            </button>
+          </div>
+        </div>
+        <div class = "details-container color-container">
+          <div class = "article-container img-container">
+            <img src = "assets/portfolio-vieworthy.png" alt = "Vieworthy" class = "project-img">
+            <div class="image-overlay">
+              <a href="https://github.com/tommycbird/vieworthy" class="project-link">
+                <ion-icon name="logo-github" class = "project-logo"></ion-icon>
+              </a>
+            </div>
+          </div>
+        
+          <h2 class = "skill-title project-title">Vieworthy</h2>
+          <h3 class = "project-subtitle">Youtube AI Video Reviewer</h3>
+          <div class = "btn-container">
+            <button class = "btn btn-color-1 " onclick="window.open('https://www.vieworthy.com')">
+              Website
+            </button>
+          </div>
+        </div>
+        <div class = "details-container color-container">
+          <div class = "article-container img-container">
+            <img src = "assets/compgeo.png" alt = "Dungeon" class = "project-img">
+            <div class="image-overlay">
+              <a href="https://github.com/tommycbird/birdev" class="project-link">
+                <ion-icon name="logo-github" class = "project-logo"></ion-icon>
+              </a>
+            </div>
+          </div>
+        
+          <h2 class = "skill-title project-title">Procedural Dungeon Generator</h2>
+          <h3 class = "project-subtitle">2d Dungeon Generator Using C++ and CGAL</h3>
+          <div class = "btn-container">
+            <button class = "btn btn-color-1 " onclick="window.open('./assets/Procedural_Cave_Generation.pdf')">
+              Research Paper
+            </button>
+          </div>
+        </div>
+        <!-- <div class = "details-container color-container">
+          <div class = "article-container img-container">
+            <img src = "assets/CC_dark.png" alt = "CC" class = "project-img">
+            <div class="image-overlay">
+              <a href="https://github.com/tommycbird/birdev" class="project-link">
+                <ion-icon name="logo-github" size = "large"></ion-icon>
+              </a>
+            </div>
+          </div>
+        
+          <h2 class = "skill-title project-title">CruiseCtrl</h2>
+          <p class = "project-description">
+            Cruise Ctrl is a cross-platform ride-sharing app for iOS built with Swift and SwiftUI, and Android via Kotlin, all seamlessly integrated with a Firebase back end. The app leverages an advanced ride-matching algorithm, significantly reducing wait times and enhancing ride capacity. In addition to efficiency gains, Cruise Ctrl prioritizes safety with innovative features ensuring both driver and passenger security during rides.
+          </p>
+          <div class = "btn-container">
+            <button class = "btn btn-color-1 " onclick="window.open('https://www.youtube.com/watch?v=yqiPp7Mc8mQ')">
+              Demo Video
+            </button>
+          </div>
+        </div> -->
+        </div>
       </div>
     </section>
-
-    <section id="about">
-      <div class="block">
-        <h2>About Me</h2>
-        <p>I am a web developer...</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      </div>
-    </section>
-
     <section id="contact">
-      <div class="block">
-        <h2>Contact</h2>
-        <p>You can contact me at...</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <p class="section_text-heading">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <ion-icon name="mail-open-outline" class = "email-icon"></ion-icon>
+          <p><a href="mailto:aadit.n.nagori@gmail.com">aadit.n.nagori@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <ion-icon name="logo-linkedin" id = "linkedin" class = "email-icon"></ion-icon>
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
       </div>
-      
     </section>
-
-  </main>
-
-</body>
+    <footer>
+      <nav>
+        <div class = "nav-links-container">
+          <ul class = "nav-links">
+            <li><a href = "#about">About</a></li>
+            <li><a href = "#skills">Skills</a></li>
+            <li><a href = "#projects">Projects</a></li>
+            <li><a href = "assets/Resume_Aadit_Nagori.pdf" target="_blank">Resume</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="src/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
